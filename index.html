@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Glosor</title>
+        <link rel="stylesheet" href="glosor.css">
+    </head>
+
+    <body>
+        <h2>Glosor</h2>
+        <div class="content">
+            <div id="question"></div>
+            <label for="userAnswer">Svar</label>
+            <br/>
+            <input type="text" id="userAnswer" name="userAnswer">
+            <br /><br />
+    
+            <div id="result"></div>
+            <button id="btnPrevious" onclick="previousQuestion()"></button>
+            <button id="btnCheckAnswer" onclick="checkAnswer()">Rätta</button>
+            <button id="btnNext" onclick="nextQuestion()"></button>
+            <br /><br /><br /><br />
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Hämta glosor</button>
+          <div class="dropdown-content">
+            <div>
+                <input type="text" id="url_file" name="url_file">
+                <button id="btnLoadUrlFile" onclick="loadFileFromURL(document.getElementById('url_file').value)">Hämta från URL</button>
+            </div>
+            <div>
+                <input type="file" name="computer_file" id="computer_file" onchange="loadFileFromComputer()" accept=".txt,.csv">
+            </div>
+            <a href="https://raw.githubusercontent.com/falkalf/glosor/gh-pages/glosor_v3/.csv">Vecka 3</a>
+            <a href="https://raw.githubusercontent.com/falkalf/glosor/gh-pages/glosor_v4/.csv">Vecka 4</a>
+          </div>
+        </div>
+        <br/>
+
+        <p class="format_example">
+            Exempel, spara nedan till en .csv-fil eller .txt-fil: <br />
+            svenska,engelska<br />
+            lila,purple<br />
+            gul,yellow<br />
+            svart,black<br />
+        </p>
+        <script src="glosor.js"></script>
+    </body>
+</html>
