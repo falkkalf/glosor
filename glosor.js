@@ -133,6 +133,8 @@ function setUp() {
  */
 function setQuestion() {
     result.innerText = "";
+    userAnswer.value = "";
+    
     currentQuestion = questions[currentQuestionIndex];
     question.innerText = currentQuestion[questionHeader];
 }
