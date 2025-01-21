@@ -29,11 +29,14 @@
                 <input type="text" id="url_file" name="url_file">
                 <button id="btnLoadUrlFile" onclick="loadFileFromURL(document.getElementById('url_file').value)">Hämta från URL</button>
             </div>
+            <br/>
             <div>
                 <input type="file" name="computer_file" id="computer_file" onchange="loadFileFromComputer()" accept=".txt,.csv">
             </div>
-            <a href="https://raw.githubusercontent.com/falkkalf/glosor/refs/heads/main/glosor/glosor_v3.csv">Vecka 3</a>
-            <a href="https://raw.githubusercontent.com/falkkalf/glosor/refs/heads/main/glosor/glosor_v4.csv">Vecka 4</a>
+            <br/>
+            <button id="btnLoadUrlFile" onclick="loadFileFromURL('https://raw.githubusercontent.com/falkkalf/glosor/refs/heads/main/glosor/glosor_v3.csv')">Vecka 3</button>
+            <br/>
+            <button id="btnLoadUrlFile" onclick="loadFileFromURL('https://raw.githubusercontent.com/falkkalf/glosor/refs/heads/main/glosor/glosor_v4.csv')">Vecka 4</button>
           </div>
         </div>
         <br/>
