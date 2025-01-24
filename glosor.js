@@ -145,7 +145,7 @@ function setQuestion() {
 function checkAnswer() {
     const correctAnswer = currentQuestion[answerHeader];
 
-    if (userAnswer.value == correctAnswer) {
+    if (userAnswer.value.toLowerCase() == correctAnswer.toLowerCase()) {
         result.innerText = "Rätt!";
     } else {
         result.innerText = "Fel, rätt svar är: " + correctAnswer;
