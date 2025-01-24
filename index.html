@@ -7,8 +7,8 @@
     </head>
 
     <body>
-        <h2>Glosor</h2>
         <div class="content">
+            <h2>Glosor</h2>
             <div id="question"></div>
             <br/>
             <input type="text" id="userAnswer" name="userAnswer">
@@ -19,36 +19,37 @@
             <button id="btnCheckAnswer" onclick="checkAnswer()">Rätta</button>
             <button id="btnNext" onclick="nextQuestion()"></button>
             <br /><br /><br /><br />
-        </div>
 
-        <div class="dropdown">
-          <button class="dropbtn">Hämta glosor</button>
-          <div class="dropdown-content">
-            <div>
-                <input type="text" id="url_file" name="url_file">
-                <button id="btnLoadUrlFile" onclick="loadFileFromURL(document.getElementById('url_file').value)">Hämta från URL</button>
+            <div class="dropdown">
+            <button class="dropbtn">Hämta glosor</button>
+            <div class="dropdown-content">
+                <button id="btnLoadUrlFile" onclick="loadFileFromURL('https://raw.githubusercontent.com/falkkalf/glosor/refs/heads/main/glosor/glosor_v5.csv')">Vecka 5</button>
+                <br/>
+                <button id="btnLoadUrlFile" onclick="loadFileFromURL('https://raw.githubusercontent.com/falkkalf/glosor/refs/heads/main/glosor/glosor_v4.csv')">Vecka 4</button>
+                <br/>
+                <button id="btnLoadUrlFile" onclick="loadFileFromURL('https://raw.githubusercontent.com/falkkalf/glosor/refs/heads/main/glosor/glosor_v3.csv')">Vecka 3</button>
+                <br/>
+                <br/>
+                <div>
+                    <input type="text" id="url_file" name="url_file">
+                    <button id="btnLoadUrlFile" onclick="loadFileFromURL(document.getElementById('url_file').value)">Hämta från URL</button>
+                </div>
+                <br/>
+                <div>
+                    <input type="file" name="computer_file" id="computer_file" onchange="loadFileFromComputer()" accept=".txt,.csv">
+                </div>
+            </div>
             </div>
             <br/>
-            <div>
-                <input type="file" name="computer_file" id="computer_file" onchange="loadFileFromComputer()" accept=".txt,.csv">
-            </div>
-            <br/>
-            <button id="btnLoadUrlFile" onclick="loadFileFromURL('https://raw.githubusercontent.com/falkkalf/glosor/refs/heads/main/glosor/glosor_v5.csv')">Vecka 5</button>
-            <br/>
-            <button id="btnLoadUrlFile" onclick="loadFileFromURL('https://raw.githubusercontent.com/falkkalf/glosor/refs/heads/main/glosor/glosor_v4.csv')">Vecka 4</button>
-            <br/>
-            <button id="btnLoadUrlFile" onclick="loadFileFromURL('https://raw.githubusercontent.com/falkkalf/glosor/refs/heads/main/glosor/glosor_v3.csv')">Vecka 3</button>
-          </div>
-        </div>
-        <br/>
 
-        <p class="format_example">
-            Exempel, spara nedan till en .csv-fil eller .txt-fil: <br />
-            svenska,engelska<br />
-            lila,purple<br />
-            gul,yellow<br />
-            svart,black<br />
-        </p>
+            <p class="format_example">
+                Exempel, spara nedan till en .csv-fil eller .txt-fil: <br />
+                svenska,engelska<br />
+                lila,purple<br />
+                gul,yellow<br />
+                svart,black<br />
+            </p>
+        </div>
         <script src="glosor.js"></script>
     </body>
 </html>
